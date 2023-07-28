@@ -4,14 +4,26 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        int[] nums = { 2, 7, 11, 15 };
-        int target = 9;
         Solution solution = new();
-        int[] sum = solution.TwoSum(nums, target);
-        foreach(int x in sum)
-        {
-            Console.WriteLine("Result: " + x + " ");
-        }
+
+        #region TwoSum
+
+        //int[] nums = { 2, 7, 11, 15 };
+        //int target = 9;
+        //int[] sum = solution.TwoSum(nums, target);
+        //foreach(int x in sum)
+        //{
+        //    Console.WriteLine("Result: " + x + " ");
+        //}
+
+        #endregion
+
+        #region IsPalindrome
+
+        //int x = 121;
+        //Console.WriteLine(solution.IsPalindrome(x));
+
+        #endregion
     }
 }
 
@@ -33,6 +45,23 @@ public class Solution
             }
         }
         return result;
+    }
+    public bool IsPalindrome(int x)
+    {
+        string str = x.ToString();
+
+        for (int i = 0; i < str.Length / 2; i++)
+        {
+            if (str[i] != str[str.Length - 1 - i])
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+    public int RomanToInt(string s)
+    {
+
     }
 
 
